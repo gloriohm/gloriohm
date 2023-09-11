@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About Me";
+
+const identity = {
+    firstName: "Sarah",
+    country: "Canada",
+    occupation: "Technical Writer",
+    hobbies: ["photography"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
+<Layout title={pageTitle}>
+    <main class="text-slate-200 p-4 m-auto max-w-3xl">
+        <div class="flex flex-col gap-4">
+            <h1 class="text-4xl text-center font-extrabold">
+                <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+                >
+                    {pageTitle}
+                </span>
+            </h1>
+            <p class="text-center">
+                This is the about page explaining what a Glioriohm is.
+            </p>
+            <h2 class="text-xl text-purple-600">
+                Here are a few facts about me:
+            </h2>
+            <ul class="ml-4 list-disc">
+                <li>My name is {identity.firstName}.</li>
+                <li>
+                    I live in {identity.country} and I work as a {
+                        identity.occupation
+                    }.
+                </li>
+                {
+                    identity.hobbies.length >= 2 && (
+                        <li>
+                            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                            {identity.hobbies[1]}
+                        </li>
+                    )
+                }
+            </ul>
+            <h2 class="text-xl text-purple-600">My skills are:</h2>
+            <ul class="ml-4 list-disc">
+                {skills.map((skill) => <li>{skill}</li>)}
+            </ul>
+            {happy && <p>I am happy to be learning Astro!</p>}
+
+            {finished && <p>I finished this tutorial!</p>}
+
+            {
+                goal === 3 ? (
+                    <p>My goal is to finish in 3 days.</p>
+                ) : (
+                    <p>My goal is not 3 days.</p>
+                )
+            }
+        </div>
+    </main>
+</Layout>
