@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: 'My First Blog Post'
+title: 'My Milkshake Brings All the Boyz to the Yard'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
@@ -18,6 +18,10 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
 3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+
+- Test
+
+- List
 
 ## What's next
 
