@@ -4,22 +4,22 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-    <div class="m-auto max-w-3xl text-slate-200 p-6">
+    <div class="">
         <h1 class="text-2xl">{frontmatter.title}</h1>
-        <p class="text-violet-300">Written by {frontmatter.author}</p>
+        <p class="text-blue-600">Written by {frontmatter.author}</p>
         <p class="mb-5">Published on: {frontmatter.pubDate.slice(0, 10)}</p>
 
-        <div class="flex flex-wrap">
+        <!--         <div class="flex flex-wrap">
             {
                 frontmatter.tags.map((tag: string) => (
-                    <p class="m-1 border-2 text-slate-900 border-stone-400 border-dotted rounded-lg py-2 px-4 bg-slate-200">
+                    <p class="mb-4 border-2 border-stone-400 border-dotted rounded-lg py-2 px-4 bg-slate-200">
                         <a href={`/tags/${tag}`}>{tag}</a>
                     </p>
                 ))
             }
-        </div>
+        </div> -->
 
-        <div class="prose prose-slate prose-invert prose-p:my-0">
+        <div class="prose prose-zinc">
             <slot />
         </div>
     </div>
