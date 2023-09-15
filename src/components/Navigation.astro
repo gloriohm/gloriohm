@@ -1,16 +1,16 @@
 ---
 const links = [
-    { address: "/", name: "Home" },
-    { address: "/about", name: "About" },
-    { address: "/blog", name: "Blog" },
+    { url: "/", name: "Home" },
+    { url: "/about", name: "About" },
+    //{ url: "/tags", name: "Tags" },
 ];
 ---
 
-<ul class=`nav-links flex gap-2 text-slate-200 max-sm:hidden max-sm:flex-col`>
+<ul class=`nav-links flex gap-2 max-sm:hidden max-sm:flex-col`>
     {
-        links.map(({ address, name }) => (
-            <li class="hover:bg-violet-400 px-2 py-1 rounded-md">
-                <a href={address}>{name}</a>
+        links.map(({ url, name }) => (
+            <li class="hover:bg-blue-600 bg-zinc-900 text-zinc-100 px-2 py-1 rounded font-semibold">
+                <a href={url}>{name}</a>
             </li>
         ))
     }

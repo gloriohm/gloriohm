@@ -3,7 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
-	title: string;
+	title: string | undefined;
 }
 
 const { title } = Astro.props;
@@ -36,20 +36,28 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<Header />
-		<slot />
-		<Footer />
+	<body class="text-zinc-900 bg-zinc-300 font-sans px-2">
+		<div class="border-b-2">
+			<div class="pt-4 pb-2 m-auto max-w-3xl">
+				<Header />
+			</div>
+		</div>
+		<div class="">
+			<div class="m-auto max-w-3xl pt-4">
+				<slot />
+			</div>
+		</div>
+		<div class="">
+			<div class="m-auto max-w-3xl pt-20">
+				<Footer />
+			</div>
+		</div>
 	</body>
 	<script>
 		import "../scripts/menu.js";
 	</script>
 
 	<style is:global>
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
-
 		:root {
 			--accent: 136, 58, 234;
 			--accent-light: 224, 204, 250;
@@ -60,22 +68,6 @@ const { title } = Astro.props;
 				rgb(var(--accent-light)) 30%,
 				white 60%
 			);
-		}
-		html {
-			font-family: system-ui, sans-serif;
-			background: #13151a;
-			background-size: 224px;
-		}
-		code {
-			font-family:
-				Menlo,
-				Monaco,
-				Lucida Console,
-				Liberation Mono,
-				DejaVu Sans Mono,
-				Bitstream Vera Sans Mono,
-				Courier New,
-				monospace;
 		}
 	</style>
 </html>

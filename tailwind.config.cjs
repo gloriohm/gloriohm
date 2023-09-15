@@ -2,6 +2,10 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		fontFamily: {
+			"sans": ["ui-sans-serif", "system-ui"],
+			'mono': ['ui-monospace', 'SFMono-Regular'],
+		},
 		extend: {},
 	},
 	plugins: [

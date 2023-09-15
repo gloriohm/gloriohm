@@ -1,9 +1,40 @@
 ---
-import Social from "./Social.astro";
+const socials = [
+    {
+        //image: faEnvelope,
+        name: "email",
+        href: "mailto:gruud@tutanota.com",
+    },
+    {
+        //image: faGithub,
+        name: "github",
+        href: "https://github.com/mangum0pus",
+    },
+    {
+        //image: faLinkedin,
+        name: "linkedin",
+        href: "https://www.linkedin.com/in/garu/",
+    },
+    {
+        //image: faSoundcloud,
+        name: "soundcloud",
+        href: "https://soundcloud.com/gloriohm",
+    },
+    {
+        name: "letterboxd",
+        href: "https://letterboxd.com/mangum",
+    },
+];
 ---
 
-<footer class="text-slate-200 text-sm my-10 flex gap-2 justify-center">
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+<footer class="text-sm">
+    <ul class="flex gap-2 justify-center">
+        {
+            socials.map(({ name, href }) => (
+                <li class="hover:text-blue-600">
+                    <a href={href}>{name}</a>
+                </li>
+            ))
+        }
+    </ul>
 </footer>
