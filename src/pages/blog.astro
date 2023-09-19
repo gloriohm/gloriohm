@@ -1,22 +1,15 @@
 ---
+import CardLayout from "../components/CardLayout.astro";
 import Layout from "../layouts/Layout.astro";
-import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Notes on Drainage";
 ---
 
 <Layout title={pageTitle}>
     <main class="">
-        <h1 class="text-4xl text-center">
-            Notes on <span class="text-purple-700">Drainage</span>
+        <h1 class="font-sans text-4xl font-extrabold mb-4">
+            Notes on Drainage
         </h1>
-        <p class="text-center">Give me the blood, Eli.</p>
-        <ul role="list" class="grid grid-cols-2 gap-8">
-            {
-                allPosts.map((post) => (
-                    <BlogPost url={post.url} title={post.frontmatter.title} />
-                ))
-            }
-        </ul>
+        <CardLayout posts={allPosts} />
     </main>
 </Layout>

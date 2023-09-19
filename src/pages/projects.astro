@@ -1,0 +1,94 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Gloriohm Productions";
+const theory = [
+    {
+        url: "/tags/theory",
+        title: "Posts tagged #theory",
+        description:
+            "For the moment, all theoretical content I write will be made availble on my blog.",
+    },
+    {
+        url: "/tags/fiction",
+        title: "Posts tagged #fiction",
+        description:
+            "Experiments in fiction will be made available on my blog.",
+    },
+];
+const dev = [
+    {
+        url: "/",
+        title: "gloriohm.vercel.app (domain pending)",
+        description:
+            "Gloriohm was created to offer an overview of my work. The name stems from a short story I wrote, and is also the name of one of my musical projects. Made with Astro and in active development.",
+    },
+    {
+        url: "https://www.pilsguiden.no",
+        title: "pilsguiden.no",
+        description:
+            "Programmed in React with PocketHost integration, this website was created to offer an overview of the beer prices in Oslo, with ambition to expand to the rest of Norway. In active development.",
+    },
+];
+const music = [
+    {
+        url: "https://www.soundcloud.com/gloriohm",
+        title: "Gloriohm",
+        description:
+            "My solo recordings are released under the Gloriohm moniker. All of it is made with modular synthesizer / Electron Octatrack mk.II",
+    },
+    {
+        url: "https://draaaaaainage.bandcamp.com/",
+        title: "Drainage",
+        description: "Hypernoise duo. Recordings pending.",
+    },
+];
+---
+
+<Layout title={pageTitle}>
+    <h1 class="text-4xl font-extrabold mb-4">
+        Projects Past / Present / Future
+    </h1>
+    <h2 class="text-2xl text-zinc-300 font-bold mb-4 bg-rose-600 -skew-x-12">
+        <span class="mx-4">Theory / Fiction</span>
+    </h2>
+    <ul class="grid max-sm:grid-cols-1 grid-cols-2 gap-8 mb-4">
+        {
+            theory.map((obj) => (
+                <Card
+                    url={obj.url}
+                    title={obj.title}
+                    description={obj.description}
+                />
+            ))
+        }
+    </ul>
+    <h2 class="text-2xl text-zinc-300 font-bold mb-4 bg-rose-700 -skew-x-12">
+        <span class="mx-4">Development</span>
+    </h2>
+    <ul class="mb-4 grid max-sm:grid-cols-1 grid-cols-2 gap-8">
+        {
+            dev.map((obj) => (
+                <Card
+                    url={obj.url}
+                    title={obj.title}
+                    description={obj.description}
+                />
+            ))
+        }
+    </ul>
+    <h2 class="text-2xl text-zinc-300 font-bold mb-4 bg-rose-800 -skew-x-12">
+        <span class="mx-4">Music</span>
+    </h2>
+    <ul class="mb-4 grid max-sm:grid-cols-1 grid-cols-2 gap-8">
+        {
+            music.map((obj) => (
+                <Card
+                    url={obj.url}
+                    title={obj.title}
+                    description={obj.description}
+                />
+            ))
+        }
+    </ul>
+</Layout>

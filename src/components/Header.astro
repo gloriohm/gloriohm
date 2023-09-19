@@ -1,11 +1,19 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
+
+const links = [
+    { url: "/", name: "Home" },
+    { url: "/about", name: "About" },
+    { url: "/projects", name: "Projects" },
+    { url: "/blog", name: "Blog" },
+    { url: "/tags", name: "Tags" },
+];
 ---
 
 <header>
     <nav class="">
-        <Hamburger />
-        <Navigation />
+        <Hamburger links={links}/>
+        <Navigation links={links}/>
     </nav>
 </header>

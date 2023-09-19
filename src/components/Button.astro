@@ -1,0 +1,13 @@
+---
+const { tags } = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-2 mb-4">
+    {
+        tags.map((tag: any) => (
+            <li class="border-2 border-zinc-950 rounded-sm py-1 px-2 bg-rose-600 text-zinc-200 hover:bg-blue-600">
+                <a href={`/tags/${tag}`}>#{tag}</a>
+            </li>
+        ))
+    }
+</ul>

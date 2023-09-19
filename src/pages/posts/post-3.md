@@ -6,8 +6,8 @@ description: "It turns out many of the things once difficult were never as hard 
 image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
-pubDate: 2023-09-15
-tags: ["draft", "fiction", "Eris+Eros", "acid"]
+pubDate: 2023-09-19
+tags: ["draft", "fiction", "psychoanalysis"]
 ---
 A life spent nurturing the imaginary, rarely making an effort towards actualization. It's comfortable here; it's unbearable. I've measured myself up against ideals that bear no relation to the Real. Feelings of inadequacy have followed.
 

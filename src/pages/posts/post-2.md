@@ -6,8 +6,8 @@ description: "It feels like something's missing; a gap previously inhabited by a
 image:
     url: "https://docs.astro.build/assets/arc.webp"
     alt: "Thumbnail of Astro arcs."
-pubDate: 2023-09-15
-tags: ["fiction", "draft", "Eris+Eros", "acid"]
+pubDate: 2023-09-16
+tags: ["fiction", "draft", "psychoanalysis"]
 ---
 It feels like something's missing; a gap previously inhabited by a memory.
 

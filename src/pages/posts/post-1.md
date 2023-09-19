@@ -7,7 +7,7 @@ author: 'Gard'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["fiction", "acid", "Eris+Eros"]
+tags: ["fiction", "psychoanalysis"]
 ---
 *Theoretical advancements have been made available to the paying public.*
 
